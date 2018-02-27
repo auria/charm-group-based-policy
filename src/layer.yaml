@@ -1,0 +1,12 @@
+includes: ['layer:openstack', 'interface:neutron-plugin', 'layer:apt']
+repo: https://github.com/nickolaev/charm-group-based-policy.git
+options:
+  basic:
+    use_venv: True
+    include_system_packages: True
+  apt:
+    install_sources: |
+      - ppa:n.nikolaev/group-based-policy
+    install_keys: |
+      - null
+

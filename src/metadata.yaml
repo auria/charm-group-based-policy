@@ -1,0 +1,27 @@
+name: group-based-policy
+subordinate: true
+maintainer: Nikolay Nikolaev <nikolay.nikolaev@canonical.com>
+summary: Group Based Policy
+description:
+  Group-Based Policy (GBP) is an API framework for OpenStack
+  that offers an intent-driven model intended to describe
+  application requirements in a way that is independent of
+  underlying infrastructure. Rather than offer network-centric
+  constructs like Layer 2 domains, GBP introduces a generic
+  “Group” primitive along with a policy model to describe
+  connectivity, security, and network services between groups.
+  To date, while GBP has focused on the networking domain, it
+  ultimately can be a generic framework that extends beyond
+  networking as well.
+
+  GBP runs as a service plugin within the Neutron process space
+  but in the future may be separated out to a separate server as
+  it develops.
+tags:
+  - openstack
+series:
+  - xenial
+requires:
+  neutron-api:
+    interface: neutron-api
+    scope: container
